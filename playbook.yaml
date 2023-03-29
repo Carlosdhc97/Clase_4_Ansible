@@ -1,0 +1,11 @@
+---
+- name: my play
+  become: yes
+  hosts: localhost
+  tasks:
+  - name: anadir usuario a grupo sudo
+    ansible.builtin.user:
+     name: Carlos
+     comment: Carlos Darien
+     group: sudo
+     state: absent
